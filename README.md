@@ -1,3 +1,3 @@
 # PizzaHunter
 
-Learning.
+Learning to set it all up.
