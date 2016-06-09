@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import venueReducer from './venue_reducer';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  venues: venueReducer
 });
 
 export default rootReducer;
