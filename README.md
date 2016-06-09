@@ -1,3 +1,3 @@
 # PizzaHunter
 
-Learning to set it all up.
+Building a local Pizza Place finder using the Foursquare API.
