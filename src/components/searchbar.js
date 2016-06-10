@@ -27,7 +27,7 @@ class SearchBar extends Component {
         <input
         value={this.state.term}
         onChange={this.onInputChange}
-        className="form-control" placeholder="Enter city"/>
+        className="form-control" placeholder="Enter city and country, e.g 'Manchester UK'"/>
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary">S</button>
         </span>

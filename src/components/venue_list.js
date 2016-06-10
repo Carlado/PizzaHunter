@@ -9,7 +9,12 @@ class venueList extends Component {
       const placeList = this.props.venues[0].response.groups[0].items;
       return placeList.map((place) => {
         return (
-          <li key={place.venue.id}>{place.venue.name} {place.venue.rating}</li>
+          <li key={place.venue.id}><h6>{place.venue.name}</h6>
+          {place.venue.rating}
+          <div>
+            {place.venue.location.address}
+          </div>
+          </li>
         )
       })
     }
