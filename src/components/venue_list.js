@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 class venueList extends Component {
   listVenues() {
     if (this.props.venues[0]) {
+      console.log(this.props.venues);
       const placeList = this.props.venues[0].response.groups[0].items;
       return placeList.map((place) => {
-        console.log(place);
         return (
           <li key={place.venue.id}>{place.venue.name} {place.venue.rating}</li>
         )
