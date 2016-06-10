@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router';
 
 
 class venueList extends Component {
@@ -9,7 +10,8 @@ class venueList extends Component {
       const placeList = this.props.venues[0].response.groups[0].items;
       return placeList.map((place) => {
         return (
-          <li key={place.venue.id}><h6>{place.venue.name}</h6>
+          <li key={place.venue.id}>
+          <Link to={'/venue/' + place.venue.id}><h6>{place.venue.name}</h6></Link>
           {place.venue.rating}
           <div>
             {place.venue.location.address}
