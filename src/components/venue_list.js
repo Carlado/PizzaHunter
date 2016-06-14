@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
+import {clearDetails} from '../actions/index';
 
 
 class venueList extends Component {
   listVenues() {
+    this.props.clearDetails();
     if (this.props.venues[0]) {
       console.log(this.props.venues);
       const placeList = this.props.venues[0].response.groups[0].items;
@@ -39,4 +41,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(venueList);
+export default connect(mapStateToProps, {clearDetails})(venueList);
