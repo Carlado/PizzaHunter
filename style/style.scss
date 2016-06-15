@@ -1,6 +1,7 @@
 .main {
   height: 100vh;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 .topbar {
   height: 50px;
@@ -9,8 +10,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; }
-  .topbar .input-group {
-    max-width: 50%; }
-
-/*# sourceMappingURL=style.css.map */
+  align-items: center;
+  .input-group {
+    max-width: 50%;
+  }
+}

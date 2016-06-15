@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {getDetails} from '../actions/index';
 import {Link} from 'react-router';
+import NavBar from './navbar';
 
 class VenuePage extends Component {
   componentWillMount() {
@@ -14,8 +15,9 @@ class VenuePage extends Component {
       const details = this.props.details[0].response.venue;
       return (
         <div>
+          <NavBar />
           <div>
-            <Link to="/">Back!</Link>
+            <Link to="/results">Back!</Link>
           </div>
           <div>
             <h4>{details.name}</h4>
@@ -24,7 +26,7 @@ class VenuePage extends Component {
       )
     } else {
       return (
-        <div>...</div>
+        <div><NavBar /></div>
       )
     }
   }
