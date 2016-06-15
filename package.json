@@ -28,6 +28,8 @@
   "dependencies": {
     "axios": "^0.12.0",
     "babel-preset-stage-1": "^6.1.18",
+    "bootstrap": "^3.3.6",
+    "google-map-react": "^0.14.4",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",

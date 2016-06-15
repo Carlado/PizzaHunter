@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {getVenues} from '../actions/index';
+import {browserHistory} from 'react-router';
 
 
 class SearchBar extends Component {
@@ -18,7 +19,9 @@ class SearchBar extends Component {
 
   onFormSubmit(event) {
     event.preventDefault();
+    browserHistory.push('/results');
     this.props.getVenues(this.state.term);
+
   }
 
   render() {
