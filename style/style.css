@@ -1,6 +1,15 @@
-.main {
+.main-splash {
   height: 100vh;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/perfect-italian-pizza.jpg");
+  background-position: center;
+  background-size: cover; }
+  .main-splash .input-group {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    max-width: 50%;
+    margin: 0 auto; }
 
 .topbar {
   height: 50px;

@@ -7,11 +7,12 @@ export default class Splash extends Component {
     return (
       <div>
         <NavBarSplash />
-        <div className="container hero">
+        <div className="main-splash">
+
           <SearchBar />
+
         </div>
       </div>
-
     )
   }
 }
