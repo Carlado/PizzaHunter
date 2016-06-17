@@ -12,11 +12,13 @@ class venueList extends Component {
       const placeList = this.props.venues[0].response.groups[0].items;
       return placeList.map((place) => {
         return (
-          <div className="col-md-3" key={place.venue.id}>
-            <Link to={'/venue/' + place.venue.id}><h6>{place.venue.name}</h6></Link>
-            {place.venue.rating}
-            <div>
-              {place.venue.location.address}
+          <div className="col-md-4" key={place.venue.id}>
+            <div className="col-md-12 venue-item">
+              <Link to={'/venue/' + place.venue.id}><h6 className="venue-name">{place.venue.name}</h6></Link>
+              <div className="venue-rating"><span>{place.venue.rating}</span></div>
+              <div>
+                {place.venue.location.address}
+              </div>
             </div>
           </div>
         )
