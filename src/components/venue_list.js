@@ -19,6 +19,10 @@ class venueList extends Component {
               <div>
                 {place.venue.location.address}
               </div>
+              <div className="tips-text">
+                <p>{place.tips[0].text}</p>
+                <p>{place.tips[0].user.firstName} {place.tips[0].user.lastName}</p>
+              </div>
             </div>
           </div>
         )

@@ -1,3 +1,7 @@
+.main {
+  font-size: 16px;
+}
+
 .main-splash {
   height: 100vh;
   overflow-x: hidden;
@@ -34,7 +38,7 @@
 .venue-item {
   border: 1px solid black;
   border-radius: 5px;
-  height: 150px;
+  height: 200px;
 }
 
 .venue-rating {
@@ -54,4 +58,8 @@
 .venue-name {
   font-size: 120%;
   display: inline-block;
+}
+
+.tips-text {
+  font-size: 80%;
 }
