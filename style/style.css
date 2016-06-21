@@ -32,7 +32,8 @@
 .venue-item {
   border: 1px solid black;
   border-radius: 5px;
-  height: 200px; }
+  height: 200px;
+  margin-bottom: 20px; }
 
 .venue-rating {
   height: 35px;
@@ -51,6 +52,6 @@
   display: inline-block; }
 
 .tips-text {
-  font-size: 80%; }
+  font-size: 70%; }
 
 /*# sourceMappingURL=style.css.map */

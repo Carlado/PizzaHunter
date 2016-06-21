@@ -1,7 +1,7 @@
 import axios from 'axios';
 import config from '../config';
 
-const ROOT_URL = 'https://api.foursquare.com/v2/venues/explore?query=pizza&v=20160608';
+const ROOT_URL = 'https://api.foursquare.com/v2/venues/explore?query=pizza&v=20160608&venuePhotos=1';
 const VENUE_URL = 'https://api.foursquare.com/v2/venues/';
 const CLIENT_ID = config.CLIENT_ID;
 const CLIENT_SECRET = config.CLIENT_SECRET;
