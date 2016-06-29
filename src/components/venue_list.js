@@ -13,16 +13,13 @@ class venueList extends Component {
       return placeList.map((place) => {
         let photo;
         if (place.venue.photos.count >= 1) {
-          console.log("Had all photos!!")
           photo = place.venue.photos.groups[0].items[0].prefix +
           "150x150" +
           place.venue.photos.groups[0].items[0].suffix;
         } else {
-          console.log("Didn't have all photos!!")
           photo = "http://placehold.it/150x150";
         }
-
-
+        
         return (
           <div className="col-md-6" key={place.venue.id}>
             <div className="col-md-12 venue-item">

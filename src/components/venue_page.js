@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {getDetails} from '../actions/index';
 import {Link} from 'react-router';
 import NavBar from './navbar';
+import PhotoList from './venue_photo_list';
 
 class VenuePage extends Component {
   componentWillMount() {
@@ -22,6 +23,7 @@ class VenuePage extends Component {
           <div>
             <h4>{details.name}</h4>
           </div>
+          <PhotoList />
         </div>
       )
     } else {
