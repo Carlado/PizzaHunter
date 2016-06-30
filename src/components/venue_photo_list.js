@@ -10,7 +10,7 @@ class PhotoList extends Component {
 
       return (
           <img key={photo.id}
-          src={photo.prefix + "250x250" + photo.suffix}
+          src={photo.prefix + "200x200" + photo.suffix}
           alt="venue photo" />
       )
     })

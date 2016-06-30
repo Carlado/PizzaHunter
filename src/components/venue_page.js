@@ -20,10 +20,11 @@ class VenuePage extends Component {
           <div>
             <Link to="/results">Back!</Link>
           </div>
-          <div>
+          <div className="container">
             <h4>{details.name}</h4>
+            <PhotoList />
           </div>
-          <PhotoList />
+
         </div>
       )
     } else {
