@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {getDetails} from '../actions/index';
+import {getDetails, getPhotos} from '../actions/index';
 import {Link} from 'react-router';
 import NavBar from './navbar';
 import PhotoList from './venue_photo_list';
@@ -8,11 +8,11 @@ import PhotoList from './venue_photo_list';
 class VenuePage extends Component {
   componentWillMount() {
     this.props.getDetails(this.props.params.id);
+    this.props.getPhotos(this.props.params.id);
   }
 
   render() {
     if (this.props.details[0]) {
-      console.log(this.props.details);
       const details = this.props.details[0].response.venue;
       return (
         <div>
@@ -41,4 +41,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, {getDetails})(VenuePage);
+export default connect(mapStateToProps, {getDetails, getPhotos})(VenuePage);
