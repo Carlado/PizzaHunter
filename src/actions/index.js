@@ -8,6 +8,7 @@ const CLIENT_SECRET = config.CLIENT_SECRET;
 
 export const GET_VENUES = 'GET_VENUES';
 export const GET_DETAILS = 'GET_DETAILS';
+export const GET_PHOTOS = 'GET_PHOTOS';
 export const CLEAR_DETAILS = 'CLEAR_DETAILS';
 
 export function getVenues(loc) {
@@ -22,6 +23,14 @@ export function getDetails(id) {
   const request = axios.get(`${VENUE_URL}${id}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=20160608`);
   return {
     type: GET_DETAILS,
+    payload: request
+  }
+}
+
+export function getPhotos(id) {
+  const request = axios.get(`${VENUE_URL}${id}/photos?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=20160608`);
+  return {
+    type: GET_PHOTOS,
     payload: request
   }
 }

@@ -4,14 +4,17 @@ import Slider from 'react-slick';
 
 
 class PhotoList extends Component {
-  getPhotos() {
-    const photoList = this.props.details[0].response.venue.photos.groups[0].items;
+  listPhotos() {
+    console.log(this.props.photos);
+    const photoList = this.props.photos[0].response.photos.items;
     return photoList.map((photo) => {
 
       return (
-          <img key={photo.id}
+        <div key={photo.id}>
+          <img
           src={photo.prefix + "200x200" + photo.suffix}
           alt="venue photo" />
+        </div>
       )
     })
   }
@@ -21,15 +24,16 @@ class PhotoList extends Component {
       arrows: true,
       dots: false,
       infinite: false,
-      speed: 500,
       slidesToShow: 4,
-      slidesToScroll: 1,
-      className: 'inner-carousel'
+      slidesToScroll: 2,
+      className: 'inner-carousel',
+      lazyLoad: true,
+      draggable: true
     }
     return (
       <div className="container carousel">
         <Slider {...settings}>
-          {this.getPhotos()}
+          {this.listPhotos()}
         </Slider>
       </div>
     );
@@ -38,7 +42,7 @@ class PhotoList extends Component {
 
 function mapStateToProps(state) {
   return {
-    details: state.details
+    photos: state.photos
   }
 }
 
