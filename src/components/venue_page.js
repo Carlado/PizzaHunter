@@ -4,6 +4,7 @@ import {getDetails, getPhotos} from '../actions/index';
 import {Link} from 'react-router';
 import NavBar from './navbar';
 import PhotoList from './venue_photo_list';
+import TipsList from './tips-list';
 
 class VenuePage extends Component {
   componentWillMount() {
@@ -23,6 +24,9 @@ class VenuePage extends Component {
           <div className="container">
             <h4>{details.name}</h4>
             <PhotoList />
+            <div className="row">
+              <TipsList />
+            </div>
           </div>
 
         </div>

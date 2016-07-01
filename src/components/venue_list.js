@@ -9,7 +9,6 @@ class venueList extends Component {
     this.props.clearDetails();
     if (this.props.venues[0]) {
       const placeList = this.props.venues[0].response.groups[0].items;
-      console.log(placeList);
       return placeList.map((place) => {
         let photo;
         if (place.venue.photos.count >= 1) {
@@ -19,7 +18,7 @@ class venueList extends Component {
         } else {
           photo = "http://placehold.it/150x150";
         }
-        
+
         return (
           <div className="col-md-6" key={place.venue.id}>
             <div className="col-md-12 venue-item">

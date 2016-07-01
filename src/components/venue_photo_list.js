@@ -5,7 +5,6 @@ import Slider from 'react-slick';
 
 class PhotoList extends Component {
   listPhotos() {
-    console.log(this.props.photos);
     const photoList = this.props.photos[0].response.photos.items;
     return photoList.map((photo) => {
 
