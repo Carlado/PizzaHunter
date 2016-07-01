@@ -8,7 +8,7 @@ class TipsList extends Component {
     console.log(tipsList);
     return tipsList.map((tip) => {
       return (
-        <div key={tip.id} class="tip-box">{tip.text}</div>
+        <div key={tip.id} className="tips-box">{tip.text}</div>
       )
     })
   }
