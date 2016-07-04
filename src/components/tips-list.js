@@ -16,7 +16,7 @@ class TipsList extends Component {
 
   render() {
       return (
-        <div className="col-md-7">
+        <div className="col-md-8">
           {this.listTips()}
         </div>
       )

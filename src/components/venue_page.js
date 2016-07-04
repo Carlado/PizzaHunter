@@ -5,6 +5,7 @@ import {Link} from 'react-router';
 import NavBar from './navbar';
 import PhotoList from './venue_photo_list';
 import TipsList from './tips-list';
+import InfoBox from './info-box';
 
 class VenuePage extends Component {
   componentWillMount() {
@@ -26,6 +27,7 @@ class VenuePage extends Component {
             <PhotoList />
             <div className="row">
               <TipsList />
+              <InfoBox />
             </div>
           </div>
 

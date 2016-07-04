@@ -1,5 +1,6 @@
 .main {
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: 'Lato'; }
 
 .main-splash {
   height: 100vh;
@@ -17,7 +18,7 @@
 .topbar {
   height: 50px;
   width: 100%;
-  background-color: red;
+  background-color: #e74c3c;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -60,5 +61,10 @@
 
 .slick-prev:before, .slick-next:before {
   color: black; }
+
+.tips-box {
+  height: 100px;
+  width: 100%;
+  border: 1px solid black; }
 
 /*# sourceMappingURL=style.css.map */
