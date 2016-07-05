@@ -6,7 +6,7 @@ import NavBar from './navbar';
 export default class Results extends Component {
   render() {
     return (
-      <div>
+      <div className="results-page">
         <NavBar />
         <VenueLocation />
         <VenueList />

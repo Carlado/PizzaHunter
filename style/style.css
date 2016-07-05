@@ -20,23 +20,24 @@
     font-size: bold;
     font-family: 'Roboto'; }
     .hero-area .input-group input {
-      height: 40px; }
+      height: 40px;
+      padding: 10px; }
   .hero-area h1, .hero-area h2 {
     text-align: center;
     color: white;
     text-transform: uppercase;
-    font-family: 'Montserrat';
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 30px; }
   .hero-area .input-group-btn button {
     height: 40px;
     width: 40px;
-    background-color: black;
+    background-color: #262626;
     color: white; }
 
 .topbar {
   height: 50px;
   width: 100%;
-  background-color: #000;
+  background-color: #262626;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -45,24 +46,26 @@
     max-width: 50%; }
   .topbar h4 {
     color: white;
-    font-family: 'Montserrat'; }
+    font-family: "Montserrat", sans-serif; }
+
+.results-page {
+  background: #ecf0f1; }
 
 .venue-location {
   text-align: center;
   margin: 20px 0; }
 
 .venue-item {
-  border: 1px solid black;
   border-radius: 5px;
   height: 200px;
+  background: white;
   margin-bottom: 20px; }
 
 .venue-rating {
   height: 35px;
   width: 35px;
-  border-radius: 50%;
+  background: #262626;
   text-align: center;
-  background: green;
   margin-bottom: 10px;
   line-height: 35px; }
   .venue-rating span {
@@ -71,7 +74,8 @@
 
 .venue-name {
   font-size: 120%;
-  display: inline-block; }
+  display: inline-block;
+  font-family: "Montserrat", sans-serif; }
 
 .tips-text {
   font-size: 70%; }

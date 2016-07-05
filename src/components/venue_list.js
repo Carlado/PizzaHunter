@@ -7,23 +7,27 @@ import {clearDetails} from '../actions/index';
 class venueList extends Component {
   listVenues() {
     this.props.clearDetails();
+
+
     if (this.props.venues[0]) {
       const placeList = this.props.venues[0].response.groups[0].items;
       return placeList.map((place) => {
         let photo;
         if (place.venue.photos.count >= 1) {
           photo = place.venue.photos.groups[0].items[0].prefix +
-          "150x150" +
+          "200x200" +
           place.venue.photos.groups[0].items[0].suffix;
         } else {
-          photo = "http://placehold.it/150x150";
+          photo = "http://placehold.it/200x200";
         }
+
+
 
         return (
           <div className="col-md-6" key={place.venue.id}>
             <div className="col-md-12 venue-item">
               <div className="row">
-                <div className="col-md-8">
+                <div className="col-xs-8">
                   <Link to={'/venue/' + place.venue.id}><h6 className="venue-name">{place.venue.name}</h6></Link>
                   <div className="venue-rating"><span>{place.venue.rating}</span></div>
                   <div>
@@ -34,7 +38,7 @@ class venueList extends Component {
                     {place.tips && <p>- {place.tips[0].user.firstName} {place.tips[0].user.lastName}</p>}
                   </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-xs-4">
                   <img src={photo} alt="venue image" />
                 </div>
               </div>
@@ -47,7 +51,7 @@ class venueList extends Component {
 
   render() {
     return(
-      <div>
+      <div className="venues-page">
         <div className="row">
           {this.listVenues()}
         </div>
