@@ -1,8 +1,12 @@
 $title-font: 'Montserrat', sans-serif;
+$paragraph-font: 'Roboto', sans-serif;
 
+body {
+  overflow-x: hidden;
+}
 .main {
   font-size: 16px;
-  font-family: 'Lato';
+  font-family: $paragraph-font;
 }
 
 .main-splash {
@@ -78,6 +82,7 @@ $title-font: 'Montserrat', sans-serif;
   height: 200px;
   background: white;
   margin-bottom: 20px;
+  font-family: $paragraph-font;
 }
 
 .venue-rating {
@@ -98,9 +103,17 @@ $title-font: 'Montserrat', sans-serif;
   display: inline-block;
   font-family: $title-font;
 }
+.image-box {
+  padding: 0;
+}
+
+.venue-image {
+  float: right;
+}
 
 .tips-text {
-  font-size: 70%;
+  font-size: 80%;
+  font-style: italic;
 }
 
 

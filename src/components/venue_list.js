@@ -18,28 +18,31 @@ class venueList extends Component {
           "200x200" +
           place.venue.photos.groups[0].items[0].suffix;
         } else {
-          photo = "http://placehold.it/200x200";
+          photo = "http://dummyimage.com/200x200/fff/026262.png&text=No+photos+from+this+place+yet";
         }
-
 
 
         return (
           <div className="col-md-6" key={place.venue.id}>
             <div className="col-md-12 venue-item">
               <div className="row">
-                <div className="col-xs-8">
+                <div className="col-xs-7">
                   <Link to={'/venue/' + place.venue.id}><h6 className="venue-name">{place.venue.name}</h6></Link>
-                  <div className="venue-rating"><span>{place.venue.rating}</span></div>
+                  <div className="venue-rating">
+                    {place.venue.rating ?
+                      <span>{place.venue.rating}</span> :
+                      <span>-</span>
+                    }
+                  </div>
                   <div>
                     {place.venue.location.address}
                   </div>
                   <div className="tips-text">
-                    {place.tips && <p>{place.tips[0].text}</p>}
-                    {place.tips && <p>- {place.tips[0].user.firstName} {place.tips[0].user.lastName}</p>}
+                    {place.tips && <p>"{place.tips[0].text}"</p>}
                   </div>
                 </div>
-                <div className="col-xs-4">
-                  <img src={photo} alt="venue image" />
+                <div className="col-xs-5 image-box">
+                  <img src={photo} alt="venue image" className="venue-image" />
                 </div>
               </div>
             </div>

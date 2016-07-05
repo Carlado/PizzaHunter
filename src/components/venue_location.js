@@ -5,7 +5,7 @@ class SidebarLocation extends Component {
   getLocation() {
     if (this.props.venues[0]) {
       const location = this.props.venues[0].response.geocode.displayString;
-      return <p className="venue-location">Delicious pizzas in {location}</p>;
+      return <p className="venue-location">Showing the most delicious Pizzas in {location}</p>;
     }
   }
 
