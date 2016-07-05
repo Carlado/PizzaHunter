@@ -8,8 +8,12 @@ export default class Splash extends Component {
       <div>
         <NavBarSplash />
         <div className="main-splash">
-
+        <div className="container hero-area">
+          <h1>Hungry? Then let's take care of it.</h1>
+          <h2>Where are you?</h2>
           <SearchBar />
+        </div>
+
 
         </div>
       </div>

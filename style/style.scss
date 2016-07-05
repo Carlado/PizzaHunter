@@ -6,28 +6,58 @@
 .main-splash {
   height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/perfect-italian-pizza.jpg');
+  background: linear-gradient(rgba(192, 57, 43,0.9), rgba(192, 57, 43,0.9)), url('../img/perfect-italian-pizza.jpg');
   background-position: center;
   background-size: cover;
-  .input-group {
-      position: relative;
-      top: 40%;
-      transform: translateY(-50%);
+}
+
+.hero-area {
+    position: relative;
+    top: 40%;
+    transform: translateY(-60%);
+    margin: 0 auto;
+    .input-group {
       max-width: 50%;
       margin: 0 auto;
+      font-size: bold;
+      font-family: 'Roboto';
+      input {
+        height: 40px;
+      }
+    }
+    h1, h2 {
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      font-family: 'Montserrat';
+      margin-bottom: 30px;
+    }
+
+    .input-group-btn {
+      button {
+        height: 40px;
+        width: 40px;
+        background-color: black;
+        color: white;
+      }
     }
 }
+
 
 .topbar {
   height: 50px;
   width: 100%;
-  background-color: #e74c3c;
+  background-color: #000;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   .input-group {
     max-width: 50%;
+  }
+  h4 {
+    color: white;
+    font-family: 'Montserrat';
   }
 }
 
@@ -81,6 +111,10 @@
   width: 100%;
   border: 1px solid black;
 
+}
+
+.hidden-tips {
+  display: none;
 }
 
 .map-area {
