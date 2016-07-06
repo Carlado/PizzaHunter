@@ -123,13 +123,19 @@ body {
 }
 
 .inner-carousel {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
+  img {
+    margin: 0 auto;
+  }
 }
 .slick-prev:before, .slick-next:before {
   color: black;
 }
 
+.venue-content {
+  margin-top: 50px;
+}
 .tips-box {
   min-height: 100px;
   width: 100%;

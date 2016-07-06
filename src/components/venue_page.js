@@ -25,7 +25,7 @@ class VenuePage extends Component {
           <div className="container">
             <h4>{details.name}</h4>
             <PhotoList />
-            <div className="row">
+            <div className="row venue-content">
               <TipsList />
               <InfoBox />
             </div>

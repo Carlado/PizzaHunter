@@ -11,7 +11,7 @@ class PhotoList extends Component {
       return (
         <div key={photo.id}>
           <img
-          src={photo.prefix + "200x200" + photo.suffix}
+          src={photo.prefix + "250x250" + photo.suffix}
           alt="venue photo" />
         </div>
       )
@@ -27,7 +27,13 @@ class PhotoList extends Component {
       slidesToScroll: 2,
       className: 'inner-carousel',
       lazyLoad: true,
-      draggable: true
+      draggable: true,
+      responsive: [
+        { breakpoint: 590, settings: { slidesToShow: 1 } },
+        { breakpoint: 800, settings: { slidesToShow: 2 } },
+        { breakpoint: 992, settings: { slidesToShow: 3 } },
+        { breakpoint: 1200, settings: { slidesToShow: 4 } }
+      ]
     }
     return (
       <div className="container carousel">
