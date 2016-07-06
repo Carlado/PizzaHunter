@@ -7,6 +7,7 @@ class InfoBox extends Component {
 
   render() {
       const details = this.props.details[0].response.venue;
+      //Remove http part of url for cleaner appearance
       const formattedUrl = details.url ? details.url.replace(/.*?:\/\//g, "") : "";
       const lat = details.location.lat;
       const lon = details.location.lng;

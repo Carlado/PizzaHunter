@@ -54,7 +54,7 @@ class venueList extends Component {
 
   render() {
     return(
-      <div className="venues-page">
+      <div className="results-page">
         <div className="row">
           {this.listVenues()}
         </div>

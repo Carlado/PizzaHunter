@@ -9,7 +9,12 @@ class TipsList extends Component {
       return (
         <div key={tip.id}>
           {i < 10 ?
-            <div className="tips-box">{tip.text}</div> :
+            <div className="tips-box">
+              <p><span><img className="user-photo" src={tip.user.photo.prefix+"40x40"+tip.user.photo.suffix} /></span>
+                {tip.user.firstName} {tip.user.lastName} says:
+              </p>
+              {tip.text}
+            </div> :
             <div className="hidden-tips">
               <div className="tips-box">{tip.text}</div>
             </div>

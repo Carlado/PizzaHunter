@@ -1,5 +1,6 @@
 $title-font: 'Montserrat', sans-serif;
 $paragraph-font: 'Roboto', sans-serif;
+$background-light: #ecf0f1;
 
 body {
   overflow-x: hidden;
@@ -69,7 +70,7 @@ body {
 }
 
 .results-page {
-  background: #ecf0f1;
+  background: $background-light;
 }
 
 .venue-location {
@@ -117,9 +118,12 @@ body {
 }
 
 
+.venue-page {
+  background: $background-light;
+}
 
 .inner-carousel {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .slick-prev:before, .slick-next:before {
@@ -127,10 +131,16 @@ body {
 }
 
 .tips-box {
-  height: 100px;
+  min-height: 100px;
   width: 100%;
-  border: 1px solid black;
+  background: white;
+  margin-bottom: 20px;
+  padding: 20px;
+}
 
+.user-photo {
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .hidden-tips {

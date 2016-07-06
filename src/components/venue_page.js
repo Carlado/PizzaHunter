@@ -17,7 +17,7 @@ class VenuePage extends Component {
     if (this.props.details[0]) {
       const details = this.props.details[0].response.venue;
       return (
-        <div>
+        <div className="venue-page">
           <NavBar />
           <div>
             <Link to="/results">Back!</Link>
