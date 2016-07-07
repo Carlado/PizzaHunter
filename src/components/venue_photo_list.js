@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Slider from 'react-slick';
+import $ from 'jquery';
+import MiniLightbox from 'mini-lightbox';
 
 
 class PhotoList extends Component {
   listPhotos() {
     const photoList = this.props.photos[0].response.photos.items;
     return photoList.map((photo) => {
-
+      const venuePhoto = photo.prefix + "250x250" + photo.suffix;
       return (
         <div key={photo.id}>
           <img
-          src={photo.prefix + "250x250" + photo.suffix}
+          src={venuePhoto}
           alt="venue photo" />
         </div>
       )
@@ -35,6 +37,7 @@ class PhotoList extends Component {
         { breakpoint: 1200, settings: { slidesToShow: 4 } }
       ]
     }
+
     return (
       <div className="container carousel">
         <Slider {...settings}>

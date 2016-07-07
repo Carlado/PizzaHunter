@@ -93,6 +93,13 @@ body {
 
 .venue-page {
   background: #ecf0f1; }
+  .venue-page h4 {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 30px;
+    display: inline-block; }
+
+.carousel {
+  margin-top: 40px; }
 
 .inner-carousel {
   width: 95%;
@@ -120,7 +127,11 @@ body {
 .hidden-tips {
   display: none; }
 
+.info-box .social-icon {
+  margin-right: 10px; }
+
 .map-area {
-  height: 200px; }
+  height: 200px;
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */

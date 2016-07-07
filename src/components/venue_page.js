@@ -19,11 +19,8 @@ class VenuePage extends Component {
       return (
         <div className="venue-page">
           <NavBar />
-          <div>
-            <Link to="/results">Back!</Link>
-          </div>
           <div className="container">
-            <h4>{details.name}</h4>
+              
             <PhotoList />
             <div className="row venue-content">
               <TipsList />

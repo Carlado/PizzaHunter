@@ -12,24 +12,24 @@ class InfoBox extends Component {
       const lat = details.location.lat;
       const lon = details.location.lng;
       return (
-        <div className="col-md-4">
-        <div className="map-area">
-          <LocationMap lat={lat} lon={lon} markers={[{
-            position: {
-              lat: lat,
-              lng: lon,
-            },
-            key: details.id,
-            defaultAnimation: 2,
-          }]}/>
-        </div>
+        <div className="col-md-4 info-box">
+          <div className="map-area">
+            <LocationMap lat={lat} lon={lon} markers={[{
+              position: {
+                lat: lat,
+                lng: lon,
+              },
+              key: details.id,
+              defaultAnimation: 2,
+            }]}/>
+          </div>
           {details.name && <p>{details.name}</p>}
           <p>{details.location.formattedAddress[0]}</p>
           <p>{details.location.formattedAddress[1]}</p>
-          <p>{details.location.formattedAddress[2]}</p>
           {details.hours && <p>{details.hours.status}</p>}
           {details.contact.formattedPhone && <p>{details.contact.formattedPhone}</p>}
           {details.url && <p><a href={details.url} target="_blank">{formattedUrl}</a></p>}
+          {details.contact.facebook && <p><a href={"https://www.facebook.com/profile.php?id=" + details.contact.facebook} target="_blank"><i className="fa social-icon fa-facebook-square" aria-hidden="true"></i>We're on Facebook!</a></p>}
         </div>
       )
   }

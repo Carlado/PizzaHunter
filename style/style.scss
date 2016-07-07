@@ -120,6 +120,15 @@ body {
 
 .venue-page {
   background: $background-light;
+    h4 {
+    font-family: $title-font;
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+
+}
+.carousel {
+  margin-top: 40px;
 }
 
 .inner-carousel {
@@ -142,7 +151,9 @@ body {
   background: white;
   margin-bottom: 20px;
   padding: 20px;
+
 }
+
 
 .user-photo {
   border-radius: 50%;
@@ -153,6 +164,13 @@ body {
   display: none;
 }
 
+.info-box {
+  .social-icon {
+    margin-right: 10px;
+  }
+}
+
 .map-area {
   height: 200px;
+  margin-bottom: 20px;
 }

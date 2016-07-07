@@ -5,42 +5,27 @@ class TipsList extends Component {
 
   listTips() {
     const tipsList =  this.props.details[0].response.venue.tips.groups[0].items;
-    return tipsList.map((tip, i) => {
+    return tipsList.map((tip) => {
       return (
         <div key={tip.id}>
-          {i < 10 ?
             <div className="tips-box">
               <p><span><img className="user-photo" src={tip.user.photo.prefix+"40x40"+tip.user.photo.suffix} /></span>
                 {tip.user.firstName} {tip.user.lastName} says:
               </p>
               {tip.text}
-            </div> :
-            <div className="hidden-tips">
-              <div className="tips-box">{tip.text}</div>
             </div>
-
-          }
         </div>
       )
     })
   }
 
-  loadMore() {
-    const hiddenTips = document.getElementsByClassName('hidden-tips');
-    const loadMoreBtn = document.querySelector('.load-more');
-    for (var i=0;i < hiddenTips.length; i+=1) {
-      hiddenTips[i].style.display = 'block';
-    }
-    loadMoreBtn.style.display = 'none';
 
-  }
 
 
   render() {
       return (
         <div className="col-md-8">
           {this.listTips()}
-          <button className="btn btn-default load-more" onClick={this.loadMore}>Load all tips...</button>
         </div>
       )
   }
