@@ -5,7 +5,6 @@ import Slider from 'react-slick';
 
 class PhotoList extends Component {
   listPhotos() {
-    if (this.props.photos[0]) {
       const photoList = this.props.photos[0].response.photos.items;
       return photoList.map((photo) => {
         const venuePhoto = photo.prefix + "250x250" + photo.suffix;
@@ -17,7 +16,6 @@ class PhotoList extends Component {
           </div>
         )
       })
-    }
 
   }
 
@@ -38,14 +36,18 @@ class PhotoList extends Component {
         { breakpoint: 1200, settings: { slidesToShow: 4 } }
       ]
     }
+    if (this.props.photos[0].response.photos.items.length >= 1) {
+      return (
+        <div className="container carousel">
+          <Slider {...settings}>
+            {this.listPhotos()}
+          </Slider>
+        </div>
+      );
+    } else {
+      return <div></div>
+    }
 
-    return (
-      <div className="container carousel">
-        <Slider {...settings}>
-          {this.listPhotos()}
-        </Slider>
-      </div>
-    );
   }
 }
 

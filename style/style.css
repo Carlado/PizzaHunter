@@ -50,6 +50,8 @@ body {
   .topbar h4 {
     color: white;
     font-family: "Montserrat", sans-serif; }
+  .topbar a {
+    text-decoration: none; }
 
 .results-page {
   background: #ecf0f1; }
@@ -93,10 +95,6 @@ body {
 
 .venue-page {
   background: #ecf0f1; }
-  .venue-page h4 {
-    font-family: "Montserrat", sans-serif;
-    margin-bottom: 30px;
-    display: inline-block; }
 
 .carousel {
   margin-top: 40px; }

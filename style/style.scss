@@ -67,6 +67,9 @@ body {
     color: white;
     font-family: $title-font;
   }
+  a {
+    text-decoration: none;
+  }
 }
 
 .results-page {
@@ -120,11 +123,6 @@ body {
 
 .venue-page {
   background: $background-light;
-    h4 {
-    font-family: $title-font;
-    margin-bottom: 30px;
-    display: inline-block;
-  }
 
 }
 .carousel {

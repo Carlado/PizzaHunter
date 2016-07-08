@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {getDetails, getPhotos} from '../actions/index';
-import {Link} from 'react-router';
 import NavBar from './navbar';
 import PhotoList from './venue_photo_list';
 import TipsList from './tips-list';
@@ -20,7 +19,7 @@ class VenuePage extends Component {
         <div className="venue-page">
           <NavBar />
           <div className="container">
-              
+
             <PhotoList />
             <div className="row venue-content">
               <TipsList />
