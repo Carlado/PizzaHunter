@@ -1,23 +1,24 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Slider from 'react-slick';
-import $ from 'jquery';
-import MiniLightbox from 'mini-lightbox';
 
 
 class PhotoList extends Component {
   listPhotos() {
-    const photoList = this.props.photos[0].response.photos.items;
-    return photoList.map((photo) => {
-      const venuePhoto = photo.prefix + "250x250" + photo.suffix;
-      return (
-        <div key={photo.id}>
-          <img
-          src={venuePhoto}
-          alt="venue photo" />
-        </div>
-      )
-    })
+    if (this.props.photos[0]) {
+      const photoList = this.props.photos[0].response.photos.items;
+      return photoList.map((photo) => {
+        const venuePhoto = photo.prefix + "250x250" + photo.suffix;
+        return (
+          <div key={photo.id}>
+            <img
+            src={venuePhoto}
+            alt="venue photo" />
+          </div>
+        )
+      })
+    }
+
   }
 
   render() {

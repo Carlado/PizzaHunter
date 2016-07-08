@@ -8,12 +8,15 @@ class TipsList extends Component {
     return tipsList.map((tip) => {
       return (
         <div key={tip.id}>
-            <div className="tips-box">
-              <p><span><img className="user-photo" src={tip.user.photo.prefix+"40x40"+tip.user.photo.suffix} /></span>
-                {tip.user.firstName} {tip.user.lastName} says:
-              </p>
-              {tip.text}
-            </div>
+            {tip.user &&
+              <div className="tips-box">
+                <p>
+                <img className="user-photo" src={tip.user.photo.prefix+"40x40"+tip.user.photo.suffix} />
+                  {tip.user.firstName} {tip.user.lastName} says:
+                </p>
+                {tip.text}
+              </div>
+            }
         </div>
       )
     })
