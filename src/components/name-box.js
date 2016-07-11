@@ -6,10 +6,10 @@ class NameBox extends Component {
     const details = this.props.details[0].response.venue;
     return (
       <div className="row name-box venue-content">
-        <div className="col-sm-8">
+        <div className="col-xs-8">
           <h3>{details.name}</h3>
         </div>
-        <div className="col-sm-4">
+        <div className="col-xs-4">
           <div className="venue-page-rating">
             {details.rating ?
               <span>{details.rating}</span> :

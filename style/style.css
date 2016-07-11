@@ -18,13 +18,14 @@ body {
   transform: translateY(-60%);
   margin: 0 auto; }
   .hero-area .input-group {
-    max-width: 50%;
+    width: 50%;
     margin: 0 auto;
     font-size: bold;
     font-family: 'Roboto'; }
     .hero-area .input-group input {
       height: 40px;
-      padding: 10px; }
+      padding: 20px;
+      border-radius: 3px; }
   .hero-area h1, .hero-area h2 {
     text-align: center;
     color: white;
@@ -32,26 +33,36 @@ body {
     font-family: "Montserrat", sans-serif;
     margin-bottom: 30px; }
   .hero-area .input-group-btn button {
-    height: 40px;
-    width: 40px;
+    height: 42px;
+    width: 42px;
     background-color: #262626;
     color: white; }
 
 .topbar {
-  height: 50px;
+  min-height: 60px;
   width: 100%;
   background-color: #262626;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
-  .topbar .input-group {
-    max-width: 50%; }
   .topbar h4 {
     color: white;
     font-family: "Montserrat", sans-serif; }
   .topbar a {
     text-decoration: none; }
+  .topbar .input-group {
+    margin: 0 auto;
+    width: 60%;
+    font-size: bold;
+    font-family: 'Roboto'; }
+    .topbar .input-group input {
+      height: 40px;
+      padding: 20px;
+      border-radius: 3px; }
+    .topbar .input-group .input-group-btn button {
+      height: 42px;
+      width: 42px; }
 
 .topbar-below {
   height: 18px;
@@ -151,5 +162,22 @@ body {
 .map-area {
   height: 200px;
   margin-bottom: 20px; }
+
+/* Medium devices (tablets, below 992px) */
+@media (max-width: 992px) {
+  .hero-area .input-group {
+    width: 70%; }
+  .hero-area h1 {
+    font-size: 180%; }
+  .hero-area h2 {
+    font-size: 150%; }
+
+  .topbar .input-group {
+    width: 70%; } }
+@media (max-width: 768px) {
+  .topbar .input-group {
+    width: 80%; }
+  .topbar .topbar-column-searchbar {
+    margin-bottom: 15px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -30,7 +30,7 @@ class SearchBar extends Component {
         <input
         value={this.state.term}
         onChange={this.onInputChange}
-        className="form-control" placeholder="Enter city and country, e.g 'Manchester UK'" required/>
+        className="form-control" placeholder="City and country, e.g 'Manchester UK'" required/>
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary"><span className="glyphicon glyphicon-search" aria-hidden="true"></span></button>
         </span>

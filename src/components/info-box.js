@@ -24,11 +24,10 @@ class InfoBox extends Component {
               defaultAnimation: 2,
             }]}/>
           </div>
-          <p>{details.location.formattedAddress[0]}</p>
-          <p>{details.location.formattedAddress[1]}</p>
-          {details.hours && <p>{details.hours.status}</p>}
-          {details.contact.formattedPhone && <p>{details.contact.formattedPhone}</p>}
-          {details.url && <p><a href={details.url} target="_blank">{formattedUrl}</a></p>}
+          <p><i className="fa fa-home" aria-hidden="true"></i>{details.location.formattedAddress[0]}</p>
+          {details.hours && <p><i className="fa fa-clock-o" aria-hidden="true"></i>{details.hours.status}</p>}
+          {details.contact.formattedPhone && <p><i className="fa fa-phone" aria-hidden="true"></i>{details.contact.formattedPhone}</p>}
+          {details.url && <p><i className="fa fa-share" aria-hidden="true"></i><a href={details.url} target="_blank">{formattedUrl}</a></p>}
           {details.contact.facebook && <p><a href={"https://www.facebook.com/profile.php?id=" + details.contact.facebook} target="_blank"><i className="fa facebook-icon fa-facebook-square" aria-hidden="true"></i>We're on Facebook!</a></p>}
           <p><a href={"https://foursquare.com/v/" + details.id} target="_blank"><i className="fa foursquare-icon fa-foursquare" aria-hidden="true"></i>View on Foursquare!</a></p>
 
