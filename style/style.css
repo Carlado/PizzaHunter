@@ -67,14 +67,14 @@ body {
   margin-bottom: 20px;
   font-family: "Roboto", sans-serif; }
 
-.venue-rating {
+.venue-rating, .venue-page-rating {
   height: 35px;
   width: 35px;
   background: #262626;
   text-align: center;
   margin-bottom: 10px;
   line-height: 35px; }
-  .venue-rating span {
+  .venue-rating span, .venue-page-rating span {
     color: white;
     font-weight: bold; }
 
@@ -97,7 +97,7 @@ body {
   background: #ecf0f1; }
 
 .carousel {
-  margin-top: 40px; }
+  margin: 40px 0; }
 
 .inner-carousel {
   width: 95%;
@@ -109,7 +109,15 @@ body {
   color: black; }
 
 .venue-content {
-  margin-top: 50px; }
+  padding-bottom: 30px;
+  text-align: center; }
+  .venue-content h3 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    line-height: 35px; }
+
+.venue-page-rating {
+  margin: 0 auto; }
 
 .tips-box {
   min-height: 100px;

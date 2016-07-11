@@ -126,7 +126,7 @@ body {
 
 }
 .carousel {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .inner-carousel {
@@ -141,8 +141,21 @@ body {
 }
 
 .venue-content {
-  margin-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  h3 {
+    font-family: $title-font;
+    margin: 0;
+    line-height: 35px;
+  }
 }
+
+.venue-page-rating {
+  @extend .venue-rating;
+  margin: 0 auto;
+}
+
+
 .tips-box {
   min-height: 100px;
   width: 100%;

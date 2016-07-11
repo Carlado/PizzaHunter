@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import NameBox from './name-box';
 
 class TipsList extends Component {
 
@@ -23,11 +24,10 @@ class TipsList extends Component {
   }
 
 
-
-
   render() {
       return (
         <div className="col-md-8">
+          <NameBox />
           {this.listTips()}
         </div>
       )

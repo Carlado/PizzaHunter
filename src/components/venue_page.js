@@ -5,6 +5,7 @@ import NavBar from './navbar';
 import PhotoList from './venue_photo_list';
 import TipsList from './tips-list';
 import InfoBox from './info-box';
+import NameBox from './name-box';
 
 class VenuePage extends Component {
   componentWillMount() {
@@ -19,9 +20,9 @@ class VenuePage extends Component {
         <div className="venue-page">
           <NavBar />
           <div className="container">
-
             <PhotoList />
-            <div className="row venue-content">
+
+            <div className="row">
               <TipsList />
               <InfoBox />
             </div>
