@@ -143,8 +143,10 @@ body {
 .hidden-tips {
   display: none; }
 
-.info-box .social-icon {
+.info-box .fa {
   margin-right: 10px; }
+.info-box .foursquare-icon {
+  color: #F94877; }
 
 .map-area {
   height: 200px;

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import LocationMap from './google-map';
+import CLIENT_ID from '../config';
 
 class InfoBox extends Component {
 
@@ -23,13 +24,15 @@ class InfoBox extends Component {
               defaultAnimation: 2,
             }]}/>
           </div>
-          {details.name && <p>{details.name}</p>}
           <p>{details.location.formattedAddress[0]}</p>
           <p>{details.location.formattedAddress[1]}</p>
           {details.hours && <p>{details.hours.status}</p>}
           {details.contact.formattedPhone && <p>{details.contact.formattedPhone}</p>}
           {details.url && <p><a href={details.url} target="_blank">{formattedUrl}</a></p>}
-          {details.contact.facebook && <p><a href={"https://www.facebook.com/profile.php?id=" + details.contact.facebook} target="_blank"><i className="fa social-icon fa-facebook-square" aria-hidden="true"></i>We're on Facebook!</a></p>}
+          {details.contact.facebook && <p><a href={"https://www.facebook.com/profile.php?id=" + details.contact.facebook} target="_blank"><i className="fa facebook-icon fa-facebook-square" aria-hidden="true"></i>We're on Facebook!</a></p>}
+          <p><a href={"https://foursquare.com/v/" + details.id} target="_blank"><i className="fa foursquare-icon fa-foursquare" aria-hidden="true"></i>View on Foursquare!</a></p>
+
+
         </div>
       )
   }
