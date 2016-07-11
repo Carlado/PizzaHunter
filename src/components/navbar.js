@@ -9,6 +9,9 @@ const NavBar = () => {
         <Link to="/"><h4>Pizza Hunter</h4></Link><h4></h4>
         <SearchBar />
       </div>
+      <div className="container-fluid topbar-below">
+        <p>Powered by Foursquare</p>
+      </div>
     </div>
   );
 }
