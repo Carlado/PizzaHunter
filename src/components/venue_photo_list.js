@@ -36,18 +36,17 @@ class PhotoList extends Component {
         { breakpoint: 1200, settings: { slidesToShow: 4 } }
       ]
     }
-    if (this.props.photos[0].response.photos.items.length >= 1) {
+    if (this.props.photos[0] && this.props.photos[0].response.photos.items.length >= 1 ) {
       return (
-        <div className="container carousel">
-          <Slider {...settings}>
-            {this.listPhotos()}
-          </Slider>
-        </div>
-      );
+            <div className="container carousel">
+              <Slider {...settings}>
+                {this.listPhotos()}
+              </Slider>
+            </div>
+      )
     } else {
       return <div></div>
     }
-
   }
 }
 
