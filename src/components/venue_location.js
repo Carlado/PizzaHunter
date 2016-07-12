@@ -3,9 +3,12 @@ import { connect } from 'react-redux';
 
 class SidebarLocation extends Component {
   getLocation() {
-    if (this.props.venues[0]) {
-      const location = this.props.venues[0].response.geocode.displayString;
+    const data = this.props.venues[0];
+    if (data && data.meta.code === 200) {
+      const location = data.response.geocode.displayString;
       return <p className="venue-location">Showing the most delicious Pizzas in {location}</p>;
+    } else if (data && data.meta.code === 400) {
+      return <p className="venue-location">Location not found</p>
     }
   }
 

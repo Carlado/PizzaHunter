@@ -9,7 +9,7 @@ class venueList extends Component {
     this.props.clearDetails();
 
 
-    if (this.props.venues[0]) {
+    if (this.props.venues[0] && this.props.venues[0].meta.code === 200) {
       const placeList = this.props.venues[0].response.groups[0].items;
       return placeList.map((place) => {
         let photo;
