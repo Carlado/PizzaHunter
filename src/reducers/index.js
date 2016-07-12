@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import venueReducer from './venue_reducer';
+import venuesReducer from './venues_reducer';
 import detailReducer from './detail_reducer';
 import photosReducer from './photos_reducer';
 
 const rootReducer = combineReducers({
-  venues: venueReducer,
+  venues: venuesReducer,
   details: detailReducer,
   photos: photosReducer
 });

@@ -1,3 +1,5 @@
+/* Variables */
+/* General */
 body {
   overflow-x: hidden; }
 
@@ -5,10 +7,11 @@ body {
   font-size: 16px;
   font-family: "Roboto", sans-serif; }
 
+/* Splash */
 .main-splash {
   height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(rgba(192, 57, 43, 0.9), rgba(192, 57, 43, 0.9)), url("../img/perfect-italian-pizza.jpg");
+  background: linear-gradient(rgba(52, 152, 219, 0.9), rgba(52, 152, 219, 0.9)), url("../img/perfect-italian-pizza.jpg");
   background-position: center;
   background-size: cover; }
 
@@ -38,6 +41,7 @@ body {
     background-color: #262626;
     color: white; }
 
+/* Navbar */
 .topbar {
   min-height: 60px;
   width: 100%;
@@ -74,6 +78,7 @@ body {
     color: white;
     font-size: 70%; }
 
+/* Search Results */
 .results-page {
   background: #ecf0f1; }
 
@@ -114,6 +119,7 @@ body {
   font-size: 80%;
   font-style: italic; }
 
+/* Venue Page */
 .venue-page {
   background: #ecf0f1; }
 
@@ -163,6 +169,7 @@ body {
   height: 200px;
   margin-bottom: 20px; }
 
+/* Import media queries */
 /* Medium devices (tablets, below 992px) */
 @media (max-width: 992px) {
   .hero-area .input-group {
@@ -174,6 +181,7 @@ body {
 
   .topbar .input-group {
     width: 70%; } }
+/* Small devices (phones, below 768px) */
 @media (max-width: 768px) {
   .topbar .input-group {
     width: 80%; }

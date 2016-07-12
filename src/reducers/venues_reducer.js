@@ -1,6 +1,6 @@
 import {GET_VENUES} from '../actions/index';
 
-export default function venueReducer(state = [], action) {
+export default function venuesReducer(state = [], action) {
 
   switch (action.type) {
     case GET_VENUES:

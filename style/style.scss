@@ -1,6 +1,10 @@
+/* Variables */
+
 $title-font: 'Montserrat', sans-serif;
 $paragraph-font: 'Roboto', sans-serif;
 $background-light: #ecf0f1;
+
+/* General */
 
 body {
   overflow-x: hidden;
@@ -10,10 +14,12 @@ body {
   font-family: $paragraph-font;
 }
 
+/* Splash */
+
 .main-splash {
   height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(rgba(192, 57, 43,0.9), rgba(192, 57, 43,0.9)), url('../img/perfect-italian-pizza.jpg');
+  background: linear-gradient(rgba(52, 152, 219,0.9), rgba(52, 152, 219,0.9)), url('../img/perfect-italian-pizza.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -52,6 +58,7 @@ body {
     }
 }
 
+/* Navbar */
 
 .topbar {
   min-height: 60px;
@@ -100,6 +107,8 @@ body {
 
   }
 }
+
+/* Search Results */
 
 .results-page {
   background: $background-light;
@@ -150,6 +159,7 @@ body {
   font-style: italic;
 }
 
+/* Venue Page */
 
 .venue-page {
   background: $background-light;
@@ -218,5 +228,7 @@ body {
   height: 200px;
   margin-bottom: 20px;
 }
+
+/* Import media queries */
 
 @import '_queries';
