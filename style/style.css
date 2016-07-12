@@ -83,7 +83,7 @@ body {
 
 .venue-item {
   border-radius: 5px;
-  height: 200px;
+  min-height: 200px;
   background: white;
   margin-bottom: 20px;
   font-family: "Roboto", sans-serif; }
@@ -179,5 +179,9 @@ body {
     width: 80%; }
   .topbar .topbar-column-searchbar {
     margin-bottom: 15px; } }
+@media (max-width: 500px) {
+  .image-box img {
+    height: 100%;
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

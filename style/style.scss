@@ -112,7 +112,7 @@ body {
 
 .venue-item {
   border-radius: 5px;
-  height: 200px;
+  min-height: 200px;
   background: white;
   margin-bottom: 20px;
   font-family: $paragraph-font;

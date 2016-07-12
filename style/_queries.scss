@@ -32,5 +32,11 @@
 }
 
 @media (max-width: 500px) {
-  
+  .image-box {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
 }
