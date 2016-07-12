@@ -30,6 +30,7 @@ class InfoBox extends Component {
           {details.url && <p><i className="fa fa-share" aria-hidden="true"></i><a href={details.url} target="_blank">{formattedUrl}</a></p>}
           {details.contact.facebook && <p><a href={"https://www.facebook.com/profile.php?id=" + details.contact.facebook} target="_blank"><i className="fa facebook-icon fa-facebook-square" aria-hidden="true"></i>We're on Facebook!</a></p>}
           <p><a href={"https://foursquare.com/v/" + details.id} target="_blank"><i className="fa foursquare-icon fa-foursquare" aria-hidden="true"></i>View on Foursquare!</a></p>
+          <p><a href={"https://www.google.com/maps/?q=" + lat + "," + lon} target="_blank"><i className="fa fa-google" aria-hidden="true"></i>View on Google Maps!</a></p>
 
 
         </div>
