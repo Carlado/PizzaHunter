@@ -7,10 +7,10 @@ import {clearDetails} from '../actions/index';
 class venueList extends Component {
   listVenues() {
     this.props.clearDetails();
+    const data = this.props.venues[0];
 
-
-    if (this.props.venues[0] && this.props.venues[0].meta.code === 200) {
-      const placeList = this.props.venues[0].response.groups[0].items;
+    if (data && data.meta.code === 200) {
+      const placeList = data.response.groups[0].items;
       return placeList.map((place) => {
         let photo;
         if (place.venue.photos.count >= 1) {
@@ -20,7 +20,6 @@ class venueList extends Component {
         } else {
           photo = "http://dummyimage.com/200x200/fff/026262.png&text=No+photos+from+this+place+yet";
         }
-
 
         return (
           <div className="col-md-6" key={place.venue.id}>

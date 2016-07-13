@@ -99,6 +99,7 @@ body {
   height: 18px;
   width: 100%;
   background: #2B57D9;
+  margin-bottom: 40px;
   p {
     text-align: center;
     line-height: 18px;
@@ -163,10 +164,11 @@ body {
 
 .venue-page {
   background: $background-light;
+  min-height: 100vh;
 
 }
 .carousel {
-  margin: 40px 0;
+  margin-bottom: 40px;
 }
 
 .inner-carousel {
