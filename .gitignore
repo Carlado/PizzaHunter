@@ -20,6 +20,7 @@ $RECYCLE.BIN/
 *.lnk
 
 /node_modules
+/dist
 bundle.js
 npm-debug.log
 
