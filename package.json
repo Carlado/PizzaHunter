@@ -30,6 +30,7 @@
     "axios": "^0.12.0",
     "babel-preset-stage-1": "^6.1.18",
     "bootstrap": "^3.3.6",
+    "es6-promise": "^3.2.1",
     "google-map-react": "^0.14.4",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
