@@ -1,4 +1,6 @@
 require('es6-promise').polyfill();
+require('es6-object-assign').polyfill();
+
 import axios from 'axios';
 import config from '../config';
 

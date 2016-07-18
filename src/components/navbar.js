@@ -5,14 +5,16 @@ import {Link} from 'react-router';
 const NavBar = () => {
   return (
   <div>
-    <div className="topbar">
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-6">
-              <Link to="/"><h4>Pizza Hunter</h4></Link>
-          </div>
-          <div className="col-sm-6 topbar-column-searchbar">
-            <SearchBar />
+    <div className="flex-wrapper">
+      <div className="topbar">
+        <div className="container navbar-container">
+          <div className="row topbar-row">
+            <div className="col-sm-6">
+                <Link to="/"><h4>Pizza Hunter</h4></Link>
+            </div>
+            <div className="col-sm-6">
+              <SearchBar />
+            </div>
           </div>
         </div>
       </div>
