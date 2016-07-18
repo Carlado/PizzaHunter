@@ -15,6 +15,7 @@ class VenuePage extends Component {
 
   render() {
     if (this.props.details[0]) {
+      console.log("Rendering with props!");
       const details = this.props.details[0].response.venue;
       return (
         <div className="venue-page">
@@ -31,6 +32,7 @@ class VenuePage extends Component {
         </div>
       )
     } else {
+      console.log("Rendering without props!");
       return (
         <div><NavBar /></div>
       )
