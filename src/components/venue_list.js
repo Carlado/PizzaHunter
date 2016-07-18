@@ -6,7 +6,6 @@ import {clearDetails} from '../actions/index';
 
 class venueList extends Component {
   listVenues() {
-    this.props.clearDetails();
     const data = this.props.venues[0];
 
     if (data && data.meta.code === 200) {
@@ -68,4 +67,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, {clearDetails})(venueList);
+export default connect(mapStateToProps)(venueList);
