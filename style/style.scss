@@ -23,8 +23,7 @@ body {
 .main-splash {
   height: 100vh;
   overflow-x: hidden;
-  background: -webkit-linear-gradient(rgba(52, 152, 219,0.9), rgba(52, 152, 219,0.9)), url('../img/perfect-italian-pizza.jpg');
-  background: linear-gradient(rgba(52, 152, 219,0.9), rgba(52, 152, 219,0.9)), url('../img/perfect-italian-pizza.jpg');
+  background: #3498db;
   background-position: center;
   background-size: cover;
 }
