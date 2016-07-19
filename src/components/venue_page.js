@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {getDetails, getPhotos} from '../actions/index';
+import {getDetails, getPhotos, clearPrevious} from '../actions/index';
 import NavBar from './navbar';
 import PhotoList from './venue_photo_list';
 import TipsList from './tips-list';
@@ -9,6 +9,7 @@ import NameBox from './name-box';
 
 class VenuePage extends Component {
   componentWillMount() {
+    
     this.props.getDetails(this.props.params.id);
     this.props.getPhotos(this.props.params.id);
   }
@@ -46,4 +47,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, {getDetails, getPhotos})(VenuePage);
+export default connect(mapStateToProps, {getDetails, getPhotos, clearPrevious})(VenuePage);

@@ -10,7 +10,7 @@ export default function LocationMap(props) {
         <div style={{height: '100%'}}/>
       }
       googleMapElement={
-        <GoogleMap defaultZoom={12} defaultCenter={{lat: props.lat, lng: props.lon}}>
+        <GoogleMap defaultZoom={12} center={{lat: props.lat, lng: props.lon}}>
         {props.markers.map((marker, index) => {
             return (
               <Marker {...marker}/>
