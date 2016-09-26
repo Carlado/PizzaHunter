@@ -6,7 +6,7 @@ import {clearPrevious} from '../actions/index';
 
 class venueList extends Component {
   listVenues() {
-    const data = this.props.venues[0];
+    const data = this.props.venues;
 
     if (data && data.meta.code === 200) {
       const placeList = data.response.groups[0].items;

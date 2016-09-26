@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 class NameBox extends Component {
   render() {
-    const details = this.props.details[0].response.venue;
+    const details = this.props.details.response.venue;
     return (
       <div className="row name-box venue-content">
         <div className="col-xs-8">

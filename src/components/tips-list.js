@@ -5,7 +5,7 @@ import NameBox from './name-box';
 class TipsList extends Component {
 
   listTips() {
-    const tipsList =  this.props.details[0].response.venue.tips.groups[0].items;
+    const tipsList =  this.props.details.response.venue.tips.groups[0].items;
     return tipsList.map((tip) => {
       return (
         <div key={tip.id}>

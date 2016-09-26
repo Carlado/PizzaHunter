@@ -9,15 +9,15 @@ import NameBox from './name-box';
 
 class VenuePage extends Component {
   componentWillMount() {
-    
+
     this.props.getDetails(this.props.params.id);
     this.props.getPhotos(this.props.params.id);
   }
 
   render() {
-    if (this.props.details[0]) {
+    if (this.props.details) {
       console.log("Rendering with props!");
-      const details = this.props.details[0].response.venue;
+      const details = this.props.details.response.venue;
       return (
         <div className="venue-page">
           <NavBar />

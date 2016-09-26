@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class SidebarLocation extends Component {
   getLocation() {
-    const data = this.props.venues[0];
+    const data = this.props.venues;
     if (data && data.meta.code === 200) {
       const location = data.response.geocode.displayString;
       return <p className="venue-location">Showing the most delicious Pizzas in {location}</p>;
