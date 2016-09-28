@@ -1,8 +1,6 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
 
 const NameBox = ({venueDetails}) => {
-
   return (
     <div className="row name-box venue-content">
       <div className="col-xs-8">
