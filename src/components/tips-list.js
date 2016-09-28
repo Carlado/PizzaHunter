@@ -25,9 +25,10 @@ class TipsList extends Component {
 
 
   render() {
+      const details = this.props.details.response.venue;
       return (
         <div className="col-md-8">
-          <NameBox />
+          <NameBox venueDetails={details} />
           {this.listTips()}
         </div>
       )
