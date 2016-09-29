@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {getDetails, getPhotos, clearPrevious} from '../actions/index';
+import {getDetails, getPhotos} from '../actions/index';
 import NavBar from './navbar';
 import PhotoList from './venue_photo_list';
 import TipsList from './tips-list';
@@ -16,7 +16,6 @@ class VenuePage extends Component {
 
   render() {
     if (this.props.details) {
-      console.log("Rendering with props!");
       const details = this.props.details.response.venue;
       return (
         <div className="venue-page">
@@ -33,7 +32,6 @@ class VenuePage extends Component {
         </div>
       )
     } else {
-      console.log("Rendering without props!");
       return (
         <div><NavBar /></div>
       )
@@ -47,4 +45,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, {getDetails, getPhotos, clearPrevious})(VenuePage);
+export default connect(mapStateToProps, {getDetails, getPhotos})(VenuePage);
