@@ -8,14 +8,8 @@ import routes from './routes';
 import ReduxPromise from 'redux-promise';
 
 
-const initialState = {
-  venues: null,
-  details: null,
-  photos: null
-};
-
-let store = createStore(reducers, initialState, compose(applyMiddleware(ReduxPromise),
-window.devToolsExtension ? window.devToolsExtension() : f => f
+let store = createStore(reducers, compose(applyMiddleware(ReduxPromise),
+            window.devToolsExtension ? window.devToolsExtension() : f => f
 ));
 
 ReactDOM.render(
