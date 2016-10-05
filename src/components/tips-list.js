@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
 import NameBox from './name-box';
 
-class TipsList extends Component {
+const TipsList = (props) => {
+  const details = props.details.response.venue;
 
-  listTips() {
-    const tipsList =  this.props.details.response.venue.tips.groups[0].items;
+  const listTips = () => {
+    const tipsList =  props.details.response.venue.tips.groups[0].items;
     return tipsList.map((tip) => {
       return (
         <div key={tip.id}>
@@ -23,22 +23,13 @@ class TipsList extends Component {
     })
   }
 
-
-  render() {
-      const details = this.props.details.response.venue;
-      return (
-        <div className="col-md-8">
-          <NameBox venueDetails={details} />
-          {this.listTips()}
-        </div>
-      )
-  }
+  return (
+    <div className="col-md-8">
+      <NameBox venueDetails={details} />
+      {listTips()}
+    </div>
+  );
 }
 
-function mapStateToProps(state) {
-  return {
-    details: state.details
-  }
-}
 
-export default connect(mapStateToProps)(TipsList);
+export default TipsList;

@@ -29,7 +29,7 @@ class VenuePage extends Component {
         <div className="container">
           <PhotoList photos={this.props.photos} />
           <div className="row">
-            <TipsList />
+            <TipsList details={this.props.details}/>
             <InfoBox details={this.props.details} />
           </div>
         </div>
