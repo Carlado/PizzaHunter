@@ -40,6 +40,4 @@ class SearchBar extends Component {
   }
 }
 
-
-
 export default connect(null, {getVenues})(SearchBar);
