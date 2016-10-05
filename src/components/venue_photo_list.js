@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import Slider from 'react-slick';
 
 
-class PhotoList extends Component {
+export default class PhotoList extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   listPhotos() {
       const photoList = this.props.photos.response.photos.items;
       return photoList.map((photo) => {
@@ -16,7 +19,6 @@ class PhotoList extends Component {
           </div>
         )
       })
-
   }
 
   render() {
@@ -36,6 +38,7 @@ class PhotoList extends Component {
         { breakpoint: 1200, settings: { slidesToShow: 4 } }
       ]
     }
+    
     if (this.props.photos && this.props.photos.response.photos.items.length >= 1 ) {
       return (
             <div className="container carousel">
@@ -49,11 +52,3 @@ class PhotoList extends Component {
     }
   }
 }
-
-function mapStateToProps(state) {
-  return {
-    photos: state.photos
-  }
-}
-
-export default connect(mapStateToProps)(PhotoList);

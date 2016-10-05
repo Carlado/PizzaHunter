@@ -27,11 +27,10 @@ class VenuePage extends Component {
       <div className="venue-page">
         <NavBar />
         <div className="container">
-          <PhotoList />
-
+          <PhotoList photos={this.props.photos} />
           <div className="row">
             <TipsList />
-            <InfoBox />
+            <InfoBox details={this.props.details} />
           </div>
         </div>
       </div>
@@ -42,7 +41,8 @@ class VenuePage extends Component {
 
 function mapStateToProps(state) {
   return {
-    details: state.details
+    details: state.details,
+    photos: state.photos
   }
 }
 
