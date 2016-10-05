@@ -40,10 +40,6 @@ class SearchBar extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    venues: state.venues
-  }
-}
 
-export default connect(mapStateToProps, {getVenues})(SearchBar);
+
+export default connect(null, {getVenues})(SearchBar);
