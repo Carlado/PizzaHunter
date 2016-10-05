@@ -5,7 +5,6 @@ import CLIENT_ID from '../config';
 
 class InfoBox extends Component {
 
-
   render() {
       const details = this.props.details.response.venue;
       //Remove http part of url for cleaner appearance
@@ -37,6 +36,7 @@ class InfoBox extends Component {
       )
   }
 }
+
 
 function mapStateToProps(state) {
   return {
