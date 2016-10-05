@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
-import {clearPrevious} from '../actions/index';
+
 
 
 class venueList extends Component {
@@ -67,4 +67,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, {clearPrevious})(venueList);
+export default connect(mapStateToProps)(venueList);
