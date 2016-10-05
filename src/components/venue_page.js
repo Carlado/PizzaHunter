@@ -9,33 +9,34 @@ import NameBox from './name-box';
 
 class VenuePage extends Component {
   componentWillMount() {
-
     this.props.getDetails(this.props.params.id);
     this.props.getPhotos(this.props.params.id);
   }
 
   render() {
-    if (this.props.details) {
-      const details = this.props.details.response.venue;
+    if (!this.props.details) {
       return (
-        <div className="venue-page">
+        <div>
           <NavBar />
-          <div className="container">
-            <PhotoList />
-
-            <div className="row">
-              <TipsList />
-              <InfoBox />
-            </div>
-          </div>
-
+          <p className="loading-info">Loading venue...</p>
         </div>
-      )
-    } else {
-      return (
-        <div><NavBar /></div>
-      )
+      );
     }
+    const details = this.props.details.response.venue;
+    return (
+      <div className="venue-page">
+        <NavBar />
+        <div className="container">
+          <PhotoList />
+
+          <div className="row">
+            <TipsList />
+            <InfoBox />
+          </div>
+        </div>
+      </div>
+    );
+
   }
 }
 
