@@ -13,7 +13,7 @@ class VenuePage extends Component {
     this.props.getPhotos(this.props.params.id);
   }
   componentDidUpdate() {
-    ReactDOM.findDOMNode(this).scrollIntoView();
+    window.scrollTo(0, 0);
   }
 
   render() {
