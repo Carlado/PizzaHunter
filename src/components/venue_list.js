@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
+import Loading from 'react-loading';
 
 
 
@@ -47,6 +48,13 @@ class venueList extends Component {
           </div>
         )
       })
+    } else {
+      return (
+        <div className="loading-info">
+          <p>Loading Pizza Places...</p>
+          <p>Nothing loading? Try a new search in the field above</p>
+        </div>
+      );
     }
   }
 

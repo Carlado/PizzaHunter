@@ -12,13 +12,20 @@ class VenuePage extends Component {
     this.props.getDetails(this.props.params.id);
     this.props.getPhotos(this.props.params.id);
   }
+  componentDidUpdate() {
+    ReactDOM.findDOMNode(this).scrollIntoView();
+  }
 
   render() {
     if (!this.props.details) {
       return (
         <div>
           <NavBar />
-          <p className="loading-info">Loading venue...</p>
+
+          <div className="loading-info">
+            <p>Loading Pizza Place... Yum!</p>
+            <p>Nothing loading? Try a new search in the field above</p>
+          </div>
         </div>
       );
     }
