@@ -30,7 +30,6 @@
   "dependencies": {
     "axios": "^0.12.0",
     "babel-preset-stage-1": "^6.1.18",
-    "bootstrap": "^3.3.6",
     "es6-object-assign": "^1.0.2",
     "es6-promise": "^3.2.1",
     "google-map-react": "^0.14.4",
