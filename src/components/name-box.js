@@ -2,7 +2,7 @@ import React from 'react';
 
 const NameBox = ({venueDetails}) => {
   return (
-    <div className="row name-box venue-content">
+    <article className="row name-box venue-content">
       <div className="col-xs-8">
         <h3>{venueDetails.name}</h3>
       </div>
@@ -14,7 +14,7 @@ const NameBox = ({venueDetails}) => {
           }
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

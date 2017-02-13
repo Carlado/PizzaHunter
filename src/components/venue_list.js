@@ -22,7 +22,7 @@ class venueList extends Component {
         }
 
         return (
-          <div className="col-md-6" key={place.venue.id}>
+          <section className="col-md-6" key={place.venue.id}>
             <div className="col-md-12 venue-item">
               <div className="row">
                 <div className="col-xs-7">
@@ -45,15 +45,15 @@ class venueList extends Component {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         )
       })
     } else {
       return (
-        <div className="loading-info">
+        <section className="loading-info">
           <p>Loading Pizza Places...</p>
           <p>Nothing loading? Try a new search in the field above</p>
-        </div>
+        </section>
       );
     }
   }

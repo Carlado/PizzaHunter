@@ -38,17 +38,17 @@ export default class PhotoList extends Component {
         { breakpoint: 1200, settings: { slidesToShow: 4 } }
       ]
     }
-    
+
     if (this.props.photos && this.props.photos.response.photos.items.length >= 1 ) {
       return (
-            <div className="container carousel">
+            <article className="container carousel">
               <Slider {...settings}>
                 {this.listPhotos()}
               </Slider>
-            </div>
+            </article>
       )
     } else {
-      return <div></div>
+      return <article />
     }
   }
 }

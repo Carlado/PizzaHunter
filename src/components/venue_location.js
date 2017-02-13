@@ -13,7 +13,7 @@ class SidebarLocation extends Component {
   }
 
   render() {
-      return <div>{this.getLocation()}</div>
+      return <article>{this.getLocation()}</article>
     }
 
 }

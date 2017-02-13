@@ -24,10 +24,10 @@ const TipsList = (props) => {
   }
 
   return (
-    <div className="col-md-8">
+    <section className="col-md-8">
       <NameBox venueDetails={details} />
       {listTips()}
-    </div>
+    </section>
   );
 }
 

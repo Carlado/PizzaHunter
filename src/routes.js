@@ -5,7 +5,6 @@ import Splash from './components/splash';
 import VenuePage from './components/venue_page';
 import Results from './components/results';
 
-
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Splash} />

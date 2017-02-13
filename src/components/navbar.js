@@ -5,7 +5,7 @@ import {Link} from 'react-router';
 const NavBar = () => {
   return (
   <div>
-    <div className="flex-wrapper">
+    <nav className="flex-wrapper">
       <div className="topbar">
         <div className="container navbar-container">
           <div className="row topbar-row">
@@ -18,7 +18,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
       <div className="container-fluid topbar-below">
         <p>Powered by Foursquare</p>
       </div>

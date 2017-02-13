@@ -5,11 +5,11 @@ import NavBar from './navbar';
 
 const Results = () => {
   return (
-    <div className="results-page">
+    <section className="results-page">
       <NavBar />
       <VenueLocation />
       <VenueList />
-    </div>
+    </section>
   );
 }
 

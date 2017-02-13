@@ -19,19 +19,19 @@ class VenuePage extends Component {
   render() {
     if (!this.props.details) {
       return (
-        <div>
+        <section>
           <NavBar />
 
           <div className="loading-info">
             <p>Loading Pizza Place... Yum!</p>
             <p>Nothing loading? Try a new search in the field above</p>
           </div>
-        </div>
+        </section>
       );
     }
     const details = this.props.details.response.venue;
     return (
-      <div className="venue-page">
+      <section className="venue-page">
         <NavBar />
         <div className="container">
           <PhotoList photos={this.props.photos} />
@@ -40,7 +40,7 @@ class VenuePage extends Component {
             <InfoBox details={this.props.details} />
           </div>
         </div>
-      </div>
+      </section>
     );
 
   }
